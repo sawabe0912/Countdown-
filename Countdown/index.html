@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- video background -->
+  <video autoplay muted loop id="myVideo">
+    <source src="video/video1.mp4" type="video/mp4">
+  </video>
+
+  <div class="video-overlay">
+  </div>
+  <div class="counter">
+   <div class="setCount" id="input-container">
+     <h1>Set a Countdown</h1>
+     <hr>
+     <form class="form" id="countdownForm">
+       <label for="title">Title</label><br>
+       <input type="text" id="title" placeholder="Title goes here" required=""><br><br>
+       <label for="date-picker">Select a Date</label><br>
+       <input type="date" id="date-picker" required><br><br>
+       <button type="submit">Submit</button>
+     </form>
+   </div>
+
+    <div class="showCount" id="showCount" hidden>
+      <h1 id="countdown-title"></h1>
+      <hr>
+      <ul>
+        <li><span></span>Days</li>
+        <li><span></span>Hours</li>
+        <li><span></span>Minutes</li>
+        <li><span></span>Seconds</li>
+      </ul>
+      <button id="countdown-button">Reset</button>
+    </div>
+
+    <div class="complete" id="complete" hidden>
+      
+        <h1 class="complete-title">Countdown Complete!</h1>
+         <hr>
+         <h2 id="complete-info"></h2>
+         <button id="complete-button">New Countdown</button>
+    </div>
+
+  </div>
+   
+<script src="script.js"></script>
+</body>
+</html>
